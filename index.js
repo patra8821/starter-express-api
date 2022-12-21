@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use(express.json({ extended: false, limit: "250mb" }));
 
-app.use("*", async (req, res) => {
+app.use("get-data", async (req, res) => {
   require("./functions/sendToDb");
 });
 

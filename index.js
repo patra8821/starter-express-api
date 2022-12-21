@@ -11,9 +11,7 @@ app.use(cors());
 
 app.use(express.json({ extended: false, limit: "250mb" }));
 
-app.use("get-data", async (req, res) => {
-  require("./functions/sendToDb");
-});
+app.use("*", require("./functions/sendToDb"));
 
 app.listen(port, () => {
   console.log(`server listing on port ${port}..`);

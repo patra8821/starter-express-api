@@ -15,4 +15,5 @@ app.use("*", require("./functions/sendToDb"));
 
 app.listen(port, () => {
   console.log(`server listing on port ${port}..`);
+  console.log("server...");
 });
